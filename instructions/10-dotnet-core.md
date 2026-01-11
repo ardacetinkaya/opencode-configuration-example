@@ -5,5 +5,5 @@
 - Use async/await end-to-end; avoid sync-over-async.
 - Prefer explicit, readable code over clever abstractions.
 - Avoid unnecessary patterns and frameworks.
-- Prefer simple approaches and minimize complexity
-- Have clean architecture style in designs
+- Prefer simple approaches and minimize complexity.
+- Have clean architecture style in designs.
