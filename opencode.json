@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "project": {
+    "name": "opencode-configuration-example",
+    "description": "Example OpenCode configuration for reference",
+    "type": "general"
+  },
+  "settings": {
+    "autoSave": true,
+    "formatOnSave": true,
+    "linting": {
+      "enabled": true,
+      "rules": "recommended"
+    },
+    "codeStyle": {
+      "indentation": "spaces",
+      "indentSize": 2,
+      "lineEndings": "lf"
+    }
+  },
+  "build": {
+    "outputDir": "dist",
+    "sourceDir": "src"
+  },
+  "testing": {
+    "framework": "auto",
+    "coverage": true,
+    "coverageThreshold": 80
+  },
+  "dependencies": {
+    "autoInstall": false,
+    "updateCheck": true
+  },
+  "extensions": {
+    "recommended": []
+  },
+  "paths": {
+    "includes": [
+      "src/**/*",
+      "lib/**/*"
+    ],
+    "excludes": [
+      "node_modules/**",
+      "dist/**",
+      "build/**",
+      ".git/**"
+    ]
+  }
+}
