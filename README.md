@@ -33,7 +33,7 @@ The example configuration includes:
 
 Feel free to adjust any settings in the `opencode.json` file:
 
-- Change `indentSize` to match your preferred indentation (2 or 4 spaces, tabs)
+- Change `indentation` and `indentSize` to match your preferred style (e.g., "spaces" with 2 or 4, or "tabs")
 - Modify `coverageThreshold` for your testing requirements
 - Add your preferred extensions to the `recommended` array
 - Update `includes` and `excludes` patterns based on your project structure
