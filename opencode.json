@@ -1,0 +1,58 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  // Make sure only Copilot is active (optional but keeps things predictable)
+  "enabled_providers": [
+    "github-copilot"
+  ],
+  // Provider config is keyed by provider id
+  "provider": {
+    "github-copilot": {
+      "options": {
+        "timeout": 600000
+      }
+    }
+  },
+  // Default model for most coding work:
+  // Pick Codex for coding-heavy workflows
+  "model": "github-copilot/claude-sonnet-4.5",
+  // Cheap/light model for "small tasks" (titles etc.)
+  "small_model": "github-copilot/gpt-5-mini",
+  // Safer defaults: ask before editing files or running shell commands
+  "permission": {
+    "edit": "ask",
+    "write": "ask",
+    "bash": "ask"
+  },
+  // Reduce noise in watched files (helps context + performance)
+  "watcher": {
+    "ignore": [
+      "**/bin/**",
+      "**/obj/**",
+      "**/.terraform/**",
+      "**/node_modules/**",
+      "**/.git/**"
+    ]
+  },
+  "mcp": {
+    "aws": {
+      "type": "local",
+      "command": ["uvx",  "awslabs.aws-documentation-mcp-server@latest"],
+      "enabled": true
+    }
+  },
+  "instructions": [
+    "~/.config/opencode/instructions/00-role-and-mindset.md",
+    "~/.config/opencode/instructions/10-dotnet-core.md",
+    "~/.config/opencode/instructions/20-web-apis.md",
+    "~/.config/opencode/instructions/30-distributed-systems.md",
+    "~/.config/opencode/instructions/40-messaging-events.md",
+    "~/.config/opencode/instructions/50-data-persistence.md",
+    "~/.config/opencode/instructions/60-cloud-platforms.md",
+    "~/.config/opencode/instructions/70-containers-kubernetes.md",
+    "~/.config/opencode/instructions/80-observability-operations.md",
+    "~/.config/opencode/instructions/90-testing-quality.md",
+    "~/.config/opencode/instructions/95-security.md",
+    "~/.config/opencode/instructions/99-evolution-documentation.md",
+    "~/.config/opencode/instructions/anti-patterns.md"
+  ]
+}
